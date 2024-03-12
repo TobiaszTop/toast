@@ -25,7 +25,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Roboto Serif', serif;
+    text-align: center;
 }
 
 img {
@@ -35,7 +35,7 @@ img {
 }
 
 .wrapper {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -81,14 +81,6 @@ figcaption:nth-of-type(2) {
 main {
     min-height: 300px;
     margin-bottom: 5%;
-}
-
-article p:nth-child(odd){
-    border:1px #555 solid;
-}
-
-article p:nth-child(even) {
-    border:1px #555 solid;
 }
 
 div.ex {
@@ -165,18 +157,25 @@ a:hover {
 }
 
 h1 {
-    padding-top: 1em;
+    font-family: "Ranga", cursive;
+    font-weight: 700;
+    font-style: normal;
+    padding-top: 2.5em;
     padding-left: 0.5%;
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 h2 {
+    font-family: "Roboto Serif", serif;
     font-size: 1.5em;
-    text-align: center;
     padding-top: 1em;
+    margin:20px;
 }
 
 h3 {
+    font-family: "Ranga", cursive;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
     font-size: 1.5em;
 }
@@ -212,11 +211,18 @@ div.graph {
 }
 
 div.text {
-    width: 50%;
+    border: 1px #555 solid;
+    width: 48%;
 }
 
 div.photo {
-    width: 45%;
+    width: 48%;
+    display:flex;
+    justify-items: center;
+}
+div.photo img{
+    object-fit:cover;
+    border: 1px #555 solid;
 }
 
 div.full {
@@ -283,7 +289,18 @@ section.tri {
 
 /*--------------------------------------*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
+
+    nav.tri{
+        display: flex;
+        flex-direction: column;
+        width:50%;
+        margin: auto;
+    }
+    nav.tri>*{
+        width:100%;
+        height:100px;
+    }
     article {
         flex-direction: column;
         align-items: center;
@@ -300,11 +317,11 @@ section.tri {
     }
 
     div.photo {
-        width: 85%;
+        width: 90%;
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     h2 {
@@ -329,7 +346,7 @@ section.tri {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 
     nav.top ul,
     article {
@@ -365,7 +382,7 @@ section.tri {
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 3em;
     }
 
     h2 {
